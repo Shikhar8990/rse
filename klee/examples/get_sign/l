@@ -1,0 +1,584 @@
+KLEE: output directory is "/home/shelly/klee/examples/get_sign/klee-out-8"
+KLEE: Using STP solver backend
+KLEE: WARNING: undefined reference to function: printf
+KLEE: SS_Executor: runFunctionAsMain
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 25 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %retval = alloca i32, align 4KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 25 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %a = alloca i32, align 4KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 25 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  store i32 0, i32* %retvalKLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 25 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %0 = bitcast i32* %a to i8*, !dbg !134KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 25 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  call void @klee_make_symbolic(i8* %0, i64 4, i8* getelementptr inbounds ([2 x i8]* @.str3, i32 0, i32 0)), !dbg !134KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %1 = load i32* %a, align 4, !dbg !135KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %call = call i32 @get_sign(i32 %1), !dbg !135KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %retval = alloca i32, align 4KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %x.addr = alloca i32, align 4KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  store i32 %x, i32* %x.addr, align 4KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %0 = load i32* %x.addr, align 4, !dbg !134KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %cmp = icmp eq i32 %0, 0, !dbg !134KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: (query [] false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  br i1 %cmp, label %if.then, label %if.end, !dbg !134KLEE: 
+
+KLEE: Branching
+
+Adding State: 0x7ffe497e9330
+KLEE: -------------------------- 
+
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 (ReadLSB w32 0 a)))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %1 = load i32* %x.addr, align 4, !dbg !139KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 a))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 9 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %call = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([6 x i8]* @.str, i32 0, i32 0)), !dbg !136KLEE: 
+
+KLEE: WARNING ONCE: calling external: printf(26074608) at /home/shelly/klee/examples/get_sign/get_sign.c:10
+KLEE: -------------------------- 
+
+zero
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 (ReadLSB w32 0 a)))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %cmp1 = icmp slt i32 %1, 0, !dbg !139KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 a))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 9 10 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  store i32 0, i32* %retval, !dbg !138KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 a))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 9 10 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  br label %return, !dbg !138KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 (ReadLSB w32 0 a)))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  br i1 %cmp1, label %if.then2, label %if.else, !dbg !139KLEE: 
+
+KLEE: Branching
+
+Adding State: 0x7ffe497e9330
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 a))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 9 10 21 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %2 = load i32* %retval, !dbg !147KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 a))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 9 10 21 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  ret i32 %2, !dbg !147KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Slt N0 0)]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 14 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %call3 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([10 x i8]* @.str1, i32 0, i32 0)), !dbg !141KLEE: 
+
+KLEE: -------------------------- 
+
+negative
+State: 0x1943f80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Eq false (Slt N0 0))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 18 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %call4 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([10 x i8]* @.str2, i32 0, i32 0)), !dbg !144KLEE: 
+
+KLEE: -------------------------- 
+
+positive
+State: 0x1943f80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Eq false (Slt N0 0))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 18 19 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  store i32 1, i32* %retval, !dbg !146KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1943f80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Eq false (Slt N0 0))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 18 19 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  br label %return, !dbg !146KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1943f80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Eq false (Slt N0 0))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 18 19 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %2 = load i32* %retval, !dbg !147KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1943f80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Eq false (Slt N0 0))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 18 19 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  ret i32 %2, !dbg !147KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x18ecb80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 a))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 8 9 10 21 25 26 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  ret i32 %call, !dbg !135KLEE: 
+
+SS_terminateStateOnExit: Exiting State 0x18ecb80
+SS_getSymbolicSolution Values 
+ 
+ 
+ 
+ 
+
+SS_processTestCase: Symbolic Solution 
+SS_processTestCase: Num Objects 1
+SS_processTestCase: Variable a
+SS_processTestCase: Values- 0
+KLEE: -------------------------- 
+
+State: 0x1943f80
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Eq false (Slt N0 0))]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 18 19 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  ret i32 %call, !dbg !135KLEE: 
+
+SS_terminateStateOnExit: Exiting State 0x1943f80
+SS_getSymbolicSolution Values 
+
+
+
+
+
+SS_processTestCase: Symbolic Solution 
+SS_processTestCase: Num Objects 1
+SS_processTestCase: Variable a
+SS_processTestCase: Values- 1
+KLEE: -------------------------- 
+
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Slt N0 0)]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 14 15 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  store i32 -1, i32* %retval, !dbg !143KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Slt N0 0)]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 14 15 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  br label %return, !dbg !143KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Slt N0 0)]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 14 15 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  %2 = load i32* %retval, !dbg !147KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Slt N0 0)]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 14 15 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  ret i32 %2, !dbg !147KLEE: 
+
+KLEE: -------------------------- 
+
+State: 0x1929a70
+Constraints: array a[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 a)))
+         (Slt N0 0)]
+        false)
+
+Filename: /home/shelly/klee/examples/get_sign/get_sign.c
+Lines: 13 14 15 
+KLEE: Calling executeInstruction 
+
+KLEE: SS_Executor: executeInstruction 
+
+  ret i32 %call, !dbg !135KLEE: 
+
+SS_terminateStateOnExit: Exiting State 0x1929a70
+SS_getSymbolicSolution Values 
+ 
+ 
+ 
+€
+
+SS_processTestCase: Symbolic Solution 
+SS_processTestCase: Num Objects 1
+SS_processTestCase: Variable a
+SS_processTestCase: Values- 0
+
+KLEE: done: total instructions = 34
+KLEE: done: completed paths = 3
+KLEE: done: generated tests = 3

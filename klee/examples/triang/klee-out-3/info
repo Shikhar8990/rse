@@ -1,0 +1,21 @@
+klee triangle.bc
+PID: 18008
+Started: 2018-05-17 10:55:39
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2018-05-17 10:55:39
+Elapsed: 00:00:00
+KLEE: done: explored paths = 12
+KLEE: done: avg. constructs per query = 106
+KLEE: done: total queries = 18
+KLEE: done: valid queries = 3
+KLEE: done: invalid queries = 15
+KLEE: done: query cex = 18
+
+KLEE: done: total instructions = 301
+KLEE: done: completed paths = 12
+KLEE: done: generated tests = 12

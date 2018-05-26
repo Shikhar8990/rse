@@ -1,0 +1,2 @@
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: calling external: printf(47452384, 4) at /home/shelly/klee/examples/triang/triangle.c:68

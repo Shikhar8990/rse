@@ -1,0 +1,1 @@
+/home/shelly/llvm_home/llvm_build/Release+Asserts/bin/clang  -I/home/shelly/klee_home/klee/include -I/home/shelly/klee_home/build/include -emit-llvm -std=gnu89 -D_DEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS -fno-builtin -O2 -g -Wall -Wwrite-strings

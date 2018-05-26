@@ -1,0 +1,220 @@
+rm -f *.o *~ *.so *.ll *.bc *.out ready/*
+g++ -I/home/shelly/llvm_home/llvm/include -I/home/shelly/llvm_home/llvm_build/include  -D_DEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -O3 -fomit-frame-pointer -fvisibility-inlines-hidden -fno-exceptions -fno-rtti -fPIC -Woverloaded-virtual -Wcast-qual -fno-rtti -std=c++11 PruneGraph.cpp -c -o prune.o
+g++ -shared prune.o -o prune.so
+BB_Id 0
+BB_Id 0
+BB_Id 1
+BB_Id 2
+BB_Id 4
+BB_Id 5
+BB_Id 6
+BB_Id 7
+BB_Id 8
+BB_Id 9
+BB_Id 10
+BB_Id 17
+BB_Id 18
+BB_Id 32
+BB_Id 33
+Basic block (name=entry) has 15 instructions.
+  br i1 %cmp, label %if.then, label %lor.lhs.false, !dbg !24  1
+Terminators 
+if.then
+Found 
+lor.lhs.false
+Found 
+Basic block (name=lor.lhs.false) has 3 instructions.
+  br i1 %cmp1, label %if.then, label %lor.lhs.false2, !dbg !24  1
+Terminators 
+if.then
+Found 
+lor.lhs.false2
+Found 
+Basic block (name=lor.lhs.false2) has 3 instructions.
+  br i1 %cmp3, label %if.then, label %if.end, !dbg !24  1
+Terminators 
+if.then
+Found 
+if.end
+Found 
+Basic block (name=if.then) has 4 instructions.
+  br label %return, !dbg !28  1
+Terminators 
+return
+Found 
+Basic block (name=if.end) has 5 instructions.
+  br i1 %cmp4, label %if.then5, label %if.end6, !dbg !30  1
+Terminators 
+if.then5
+Found 
+if.end6
+Found 
+Basic block (name=if.then5) has 4 instructions.
+  br label %if.end6, !dbg !34  1
+Terminators 
+if.end6
+Found 
+Basic block (name=if.end6) has 4 instructions.
+  br i1 %cmp7, label %if.then8, label %if.end10, !dbg !35  1
+Terminators 
+if.then8
+Found 
+if.end10
+Found 
+Basic block (name=if.then8) has 4 instructions.
+  br label %if.end10, !dbg !39  1
+Terminators 
+if.end10
+Found 
+Basic block (name=if.end10) has 4 instructions.
+  br i1 %cmp11, label %if.then12, label %if.end14, !dbg !40  1
+Terminators 
+if.then12
+Found 
+if.end14
+Found 
+Basic block (name=if.then12) has 4 instructions.
+  br label %if.end14, !dbg !44  1
+Terminators 
+if.end14
+Found 
+Basic block (name=if.end14) has 3 instructions.
+  br i1 %cmp15, label %if.then16, label %if.end27, !dbg !45  1
+Terminators 
+if.then16
+Found 
+if.end27
+Found 
+Basic block (name=if.then16) has 6 instructions.
+  br i1 %cmp18, label %if.then25, label %lor.lhs.false19, !dbg !47  1
+Terminators 
+if.then25
+Found 
+lor.lhs.false19
+Found 
+Basic block (name=lor.lhs.false19) has 6 instructions.
+  br i1 %cmp21, label %if.then25, label %lor.lhs.false22, !dbg !47  1
+Terminators 
+if.then25
+Found 
+lor.lhs.false22
+Found 
+Basic block (name=lor.lhs.false22) has 6 instructions.
+  br i1 %cmp24, label %if.then25, label %if.else, !dbg !47  1
+Terminators 
+if.then25
+Found 
+if.else
+Found 
+Basic block (name=if.then25) has 2 instructions.
+  br label %if.end26, !dbg !52  1
+Terminators 
+if.end26
+Found 
+Basic block (name=if.else) has 2 instructions.
+  br label %if.end26  1
+Terminators 
+if.end26
+Found 
+Basic block (name=if.end26) has 3 instructions.
+  br label %return, !dbg !55  1
+Terminators 
+return
+Found 
+Basic block (name=if.end27) has 3 instructions.
+  br i1 %cmp28, label %if.then29, label %if.else30, !dbg !56  1
+Terminators 
+if.then29
+Found 
+if.else30
+Found 
+Basic block (name=if.then29) has 2 instructions.
+  br label %if.end51, !dbg !60  1
+Terminators 
+if.end51
+Found 
+Basic block (name=if.else30) has 3 instructions.
+  br i1 %cmp31, label %land.lhs.true, label %if.else35, !dbg !61  1
+Terminators 
+land.lhs.true
+Found 
+if.else35
+Found 
+Basic block (name=land.lhs.true) has 6 instructions.
+  br i1 %cmp33, label %if.then34, label %if.else35, !dbg !61  1
+Terminators 
+if.then34
+Found 
+if.else35
+Found 
+Basic block (name=if.then34) has 2 instructions.
+  br label %if.end50, !dbg !65  1
+Terminators 
+if.end50
+Found 
+Basic block (name=if.else35) has 3 instructions.
+  br i1 %cmp36, label %land.lhs.true37, label %if.else41, !dbg !66  1
+Terminators 
+land.lhs.true37
+Found 
+if.else41
+Found 
+Basic block (name=land.lhs.true37) has 6 instructions.
+  br i1 %cmp39, label %if.then40, label %if.else41, !dbg !66  1
+Terminators 
+if.then40
+Found 
+if.else41
+Found 
+Basic block (name=if.then40) has 2 instructions.
+  br label %if.end49, !dbg !70  1
+Terminators 
+if.end49
+Found 
+Basic block (name=if.else41) has 3 instructions.
+  br i1 %cmp42, label %land.lhs.true43, label %if.else47, !dbg !71  1
+Terminators 
+land.lhs.true43
+Found 
+if.else47
+Found 
+Basic block (name=land.lhs.true43) has 6 instructions.
+  br i1 %cmp45, label %if.then46, label %if.else47, !dbg !71  1
+Terminators 
+if.then46
+Found 
+if.else47
+Found 
+Basic block (name=if.then46) has 2 instructions.
+  br label %if.end48, !dbg !75  1
+Terminators 
+if.end48
+Found 
+Basic block (name=if.else47) has 2 instructions.
+  br label %if.end48  1
+Terminators 
+if.end48
+Found 
+Basic block (name=if.end48) has 1 instructions.
+  br label %if.end49  1
+Terminators 
+if.end49
+Found 
+Basic block (name=if.end49) has 1 instructions.
+  br label %if.end50  1
+Terminators 
+if.end50
+Found 
+Basic block (name=if.end50) has 1 instructions.
+  br label %if.end51  1
+Terminators 
+if.end51
+Found 
+Basic block (name=if.end51) has 3 instructions.
+  br label %return, !dbg !78  1
+Terminators 
+return
+Found 
+Basic block (name=return) has 2 instructions.
+  ret i32 %38, !dbg !79  1
+Terminators 

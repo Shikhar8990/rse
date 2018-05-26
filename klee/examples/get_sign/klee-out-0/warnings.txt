@@ -1,0 +1,3 @@
+KLEE: WARNING: undefined reference to function: printf
+KLEE: WARNING ONCE: skipping fork (fork disabled on current path)
+KLEE: WARNING ONCE: calling external: printf(29556448) at /home/shelly/klee/examples/get_sign/get_sign.c:19
